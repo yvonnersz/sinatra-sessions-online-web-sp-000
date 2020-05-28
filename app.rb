@@ -40,7 +40,7 @@ class App < Sinatra::Base
 
   get '/set_session' do
     #set session id here
-    @session[:id] = 1
+    @session[:id] = User.find_by(email: params[:email], password: params[:password])
 
     if session[:id] == 1
       # "Session ID set. It's currently set to #{session[:id]}."
