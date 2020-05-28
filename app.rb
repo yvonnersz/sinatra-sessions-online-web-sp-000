@@ -41,7 +41,6 @@ class App < Sinatra::Base
   get '/set_session' do
     #set session id here
     @session[:id] = 1
-    binding.pry
 
     if session[:id] == 1
       # "Session ID set. It's currently set to #{session[:id]}."
